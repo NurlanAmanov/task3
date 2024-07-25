@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="x"><button onclick="ok()">ok</button><span id="ntc"></span>
+    <script>
+        const x = document.getElementById('x')
+        const ntc = document.getElementById("ntc")
+        let kod=''
+        function ok(){
+            let kod='';
+           
+            for (let b = 1; b <= 100; b+=+x.value) {
+                kod += ',' + b;
+            }
+
+            
+            ntc.innerHTML=kod
+           
+        }
+        
+        </script>
+</body>
+</html>

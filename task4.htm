@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cavab{
+            display: flex;
+            flex-direction: row;
+        }
+        .kvdrt{
+            width: 40px;
+            height: 40px;
+            color: green;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+   
+        <input type="number" id="x">
+        <button onclick="hesab()">OK</button>
+        <div id="cavab"></div>
+
+
+    <script>
+        const x=document.getElementById('x')
+        const cavab=document.getElementById("cavab")
+        kod=''
+        function hesab(){
+            let kod=''
+            for(let a=x.value; a>=1; a--){
+                kod+=`<div class="kvdrt">${a}</div>`
+                cavab.innerHTML=kod
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="x1">
+    <input type="number" id="x2">
+    <button onclick="hesab()">ok</button>
+    <div id="ntc"></div>
+    <script>
+        const x1=document.getElementById('x1')
+        const x2=document.getElementById('x2')
+        const ntc = document.getElementById("ntc")
+        function hesab(){
+            let kod='';
+            
+            for(let d=1; d<=x1.value; d+=+x2.value){
+            kod+=','+d
+            }
+            ntc.innerHTML=kod
+        }
+    </script>
+</body>
+</html>
